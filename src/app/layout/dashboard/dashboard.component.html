@@ -180,7 +180,7 @@
             (beforeChange)="beforeChange($event)">
             <div ngxSlickItem *ngFor="let slide of allComics" class="slide slide-item">
              <div class="pd-12">
-              <img src="{{ slide?.comics_path }}" alt="" style="border-radius: 10px;"  routerLink="/comics">
+              <img src="{{ slide?.comics_path }}" alt="" style="border-radius: 10px;cursor: pointer;"  routerLink="/comics">
              </div>
             </div>
           </ngx-slick-carousel>

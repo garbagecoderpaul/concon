@@ -1,7 +1,7 @@
 import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
 import { ApiService } from 'src/app/service/api.service';
-
+import { TagInputComponent } from 'ngx-chips';
 
 
 export interface AutoCompleteModel {
@@ -18,6 +18,9 @@ export interface AutoCompleteModel {
 })
 export class NftdetailComponent implements OnInit {
   @ViewChild('listContainer') listContainer: ElementRef;
+  @ViewChild('tagInput', { static: true }) tagInput: TagInputComponent;
+  @ViewChild('tagInputMob', { static: true }) tagInputMob: TagInputComponent;
+
   defaultTouch = { x: 0, y: 0, time: 0 };
   dscOurNft: any;
   nfts: any[] = [];
@@ -83,30 +86,21 @@ export class NftdetailComponent implements OnInit {
       {id:'21',value:'hat',label:'hat'},
       {id:'22',value:'hoodie',label:'hoodie'},
     ]
-    // this.dropdownList = [
-    //   { item_id: 1, item_text: 'Mumbai' },
-    //   { item_id: 2, item_text: 'Bangaluru' },
-    //   { item_id: 3, item_text: 'Pune' },
-    //   { item_id: 4, item_text: 'Navsari' },
-    //   { item_id: 5, item_text: 'New Delhi' }
-    // ];
-    // this.selectedItems = [
-    //   { item_id: 3, item_text: 'Pune' },
-    //   { item_id: 4, item_text: 'Navsari' }
-    // ];
-    // this.dropdownSettings = {
-    //   singleSelection: false,
-    //   idField: 'id',
-    //   textField: 'value',
-    //   selectAllText: 'Select All',
-    //   unSelectAllText: 'UnSelect All',
-    //   itemsShowLimit: 3,
-    //   allowSearchFilter: true,
-    // };
-  //  document.getElementsByClassName('dropdown-btn')[0].innerHTML=`<div style="text-align: center; display: block; margin: auto; font-weight:700;font-size:25px" ><img src="assets/images/filter.png" alt="" width="40px"> Filter</div>`
   }
+
+  openTagInputDropdown() { //used to open dropdown on filter button click in desktop
+    if (this.tagInput) {
+      this.tagInput.dropdown.show();
+    }
+  }
+
+  openTagInputDropdownMob() { //used to open dropdown on filter button click in mobile
+    if (this.tagInputMob) {
+      this.tagInputMob.dropdown.show();
+    }
+  }
+
   onItemSelect(item: any) {
-    // console.log(item);
     this.getallnft(this.searchStr,item)
     this.nfts = [];
     this.nfts = this.nft.filter((i: any) => {
@@ -117,7 +111,6 @@ export class NftdetailComponent implements OnInit {
   }
 
   onItemDeSelect(item: any) {
-    // console.log(item);
     this.selectedItems.pop()
     this.selectedItem = []
     // this.getallnft(this.searchStr,this.selectedItems)
@@ -125,7 +118,6 @@ export class NftdetailComponent implements OnInit {
     // this.nfts = this.nft
   }
   onSelectAll(items: any) {
-    // console.log(items);
     this.selectedItems.push(items.value)
     // this.getallnft(this.searchStr,this.selectedItems)
     // this.nfts = [];
@@ -178,10 +170,8 @@ export class NftdetailComponent implements OnInit {
           this.items.push(JSON.parse(i._type))
           this.items = this.items.filter(i=> {return i !== null;})
         })
-        // this.items = this.items[0]?.concat(this.items[1]?.concat(this.items[2]?.concat(this.items[3])))
         const concatenatedArray = [].concat(...this.items); // to concat the multiple arrays in one array
         this.items = concatenatedArray
-        // console.log('ggcgcgcgf',this.items);
 
         const uniqueValues = {}; // Create an object to keep track of unique combinations of 'display' and 'value'
 
@@ -293,7 +283,6 @@ export class NftdetailComponent implements OnInit {
   }
 
   change(event: any) { //for input box
-    // console.log('cftxtfrctfr',event);
     this.filterType = null
     this.CheckType = event;
     if (this.CheckType == 'Russia') {
@@ -326,7 +315,6 @@ export class NftdetailComponent implements OnInit {
   @HostListener('touchend', ['$event'])
   @HostListener('touchcancel', ['$event'])
   handleTouch(event) {
-    // console.log(event);
     let touch = event.touches[0] || event.changedTouches[0];
     if (event.type === 'touchstart') {
       this.defaultTouch.x = touch.pageX;
@@ -385,7 +373,6 @@ export class NftdetailComponent implements OnInit {
     this.selectedItem = this.nfts[this.selectedIndex];
     this.scrollToActiveItem();
     this.allowRead = false
-    // console.log(this.selectedItem);
     this.load = false
   }
 

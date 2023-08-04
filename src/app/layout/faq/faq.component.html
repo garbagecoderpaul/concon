@@ -1,0 +1,37 @@
+<section class="faq-div">
+  <div class="container">
+    <div class="row ">
+      <div class="col-lg-12">
+        <div class="faq-content">
+          <h1 class="forUndrline">FAQ</h1>
+        </div>
+      </div>
+      <div class="col-lg-12 accordion" id="accordionExample">
+        <div class="faq-drop" *ngFor="let item of allFaq; let i = index">
+          <div class="cus-colaps" [ngClass]="{ 'collapsed': i > -1 && !showIndexFaq }" type="button" data-bs-toggle="collapse"
+            [attr.data-bs-target]="'#collapse'+i" aria-expanded="true" [attr.aria-controls]="'collapse'+i">
+            <a class="btn btn-primary">
+              {{item.question}}
+            </a>
+            <img class="arrosvg" src="assets/images/arrow.svg" alt="">
+          </div>
+          <div class="collapse" [id]="'collapse'+i" [attr.aria-labelledby]="'heading'+i"
+            data-bs-parent="#accordionExample" [ngClass]="{ 'show': i > -1 && showIndexFaq }" id="collapseExample3">
+            <div class="card card-body">
+              <p class="same-pp" [innerHTML]="item.answer"></p>
+              <div class="drop-down__content-bg">
+                <span class="offer__text-corner" data-corner-position="top-left"></span>
+                <span class="offer__text-corner" data-corner-position="top-right"></span>
+                <span class="offer__text-corner" data-corner-position="bottom-left"></span>
+                <span class="offer__text-corner" data-corner-position="bottom-right"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ng-container *ngIf="!allFaq?.length || error == true">
+          <p class="text-center text-white">No Data Found</p>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</section>

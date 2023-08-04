@@ -1,0 +1,181 @@
+<section id  = 'logo2' class="custom-header">
+<div class="fix-top-menu" id="themeWhite">
+  <img class="img-fix-logo" routerLink="/" src="assets/images/flat_logo.png" alt="" >
+  <a (click)="opensideMenu()" class="nav-br"><i class="fa-solid fa-bars"></i></a>
+</div>
+
+<div class="fix-top-menu-open" [ngClass]="{'open-menu' : isMenuOpen}">
+  <div class="fix-top-menu" id="themeWhite">
+    <h1>Menu</h1>
+    <hr class="text-white">
+    <a class="close-b" (click)="opensideMenu()"><i class="fa-solid fa-xmark"></i></a>
+    </div>
+  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <li class="nav-item" (click)="closeNavbar()">
+      <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" aria-current="page" href="JavaScript:void(0)">Home</a>
+    </li>
+    <li class="nav-item" (click)="closeNavbar()">
+      <a class="nav-link" routerLink="/documentaries" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" aria-current="page" href="JavaScript:void(0)">Documentary</a>
+    </li>
+    <li class="nav-item" (click)="closeNavbar()">
+      <a class="nav-link" routerLink="/comics" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Comics</a>
+    </li>
+    <li class="nav-item" (click)="closeNavbar()">
+      <a class="nav-link"  routerLink="/voting" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" href="JavaScript:void(0)">Voting</a>
+    </li>
+    <li class="nav-item" (click)="closeNavbar()">
+      <a class="nav-link"  routerLink="/token" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" href="JavaScript:void(0)">Token</a>
+    </li>
+  </ul>
+  <ul class="FooterLinkUl1 headerLink">
+    <span *ngIf="contractService.selectedAccount" style="color: #fff;">
+      <p class="wallerADD">{{contractService.selectedAccount}}</p>
+      Balance: {{userBalance.balances.mainBalanceEther}}
+    </span>
+    <li (click)="closeNavbar()">
+      <a href="JavaScript:void(0)" (click)="navigate()" type="button" class="btnnn" style="border-radius: 8px;"><img src="assets/images/discord.png" alt="" srcset="" style="width: 22px !important;margin-top: -4px;"> &nbsp;Join </a>
+    </li>
+    <li *ngIf="!contractService.selectedAccount " (click)="closeNavbar()">
+      <a href="JavaScript:void(0)" type="button" class="btnnn" (click)="open(content)" style="border-radius: 8px;"><img src="assets/images/wallet.png" alt="" srcset="" style="width: 14px !important;"> &nbsp;Connect</a>
+    </li>
+    <li *ngIf="contractService.selectedAccount" (click)="closeNavbar()">
+      <a class="btnnn"  href="JavaScript:void(0)" type="button" style="border-radius: 8px; font-size: 16px;"><img src="assets/images/wallet.png" alt="" srcset="" style="width: 14px !important;"> &nbsp;Connected</a>
+    </li>
+    <li (click)="openTypeform()">
+      <a href="JavaScript:void(0)" type="button" class="mint" style="border-radius: 8px;"><img src="assets/images/whitelist.png" alt="" srcset="" style="width: 12px !important;margin-top: -1px;"> &nbsp;Whitelist Now</a>
+      </li>
+    <!-- <li><a href="JavaScript:void(0)"><img src="assets/images/social-1.svg" alt="instagram"></a></li>
+    <li><a href="JavaScript:void(0)"><img src="assets/images/social-2.svg" alt="discord"></a></li>
+    <li><a href="JavaScript:void(0)"><img src="assets/images/social-3.svg" alt="twitter"></a></li> -->
+  </ul>
+</div>
+</section>
+
+<section id  = 'logo' class="custom-header">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" id="themeWhite">
+    <div class="container" >
+      <div (click)="closeNavbar()">
+        <a class="navbar-brand" href="JavaScript:void(0)" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <img src="assets/images/logo.png" alt="logo_img"></a>
+      </div>
+      <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" #navbarContent>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item" (click)="closeNavbar()">
+            <a class="nav-link" routerLink="/documentaries" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" aria-current="page" href="JavaScript:void(0)">Documentary</a>
+          </li>
+          <li class="nav-item" (click)="closeNavbar()">
+            <a class="nav-link" routerLink="/comics" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Comics</a>
+          </li>
+          <li class="nav-item" (click)="closeNavbar()">
+            <a class="nav-link"  routerLink="/voting" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" href="JavaScript:void(0)">Voting</a>
+          </li>
+          <li class="nav-item" (click)="closeNavbar()">
+            <a class="nav-link"  routerLink="/token" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" href="JavaScript:void(0)">Token</a>
+          </li>
+        </ul>
+        <ul class="FooterLinkUl1 headerLink">
+          <span *ngIf="contractService.selectedAccount" style="color: #fff;">
+            <p class="wallerADD">{{contractService.selectedAccount}}</p>
+            Balance: {{userBalance.balances.mainBalanceEther}}
+          </span>
+          <li (click)="closeNavbar()">
+            <a href="JavaScript:void(0)" (click)="navigate()" type="button" class="btnnn" style="border-radius: 8px;"><img src="assets/images/discord.png" alt="" srcset="" style="width: 22px !important;margin-top: -4px;"> &nbsp;Join </a>
+          </li>
+          <li *ngIf="!contractService.selectedAccount " (click)="closeNavbar()">
+            <a href="JavaScript:void(0)" type="button" class="btnnn" (click)="open(content)" style="border-radius: 8px;"><img src="assets/images/wallet.png" alt="" srcset="" style="width: 14px !important;"> &nbsp;Connect</a>
+          </li>
+          <li *ngIf="contractService.selectedAccount" (click)="closeNavbar()">
+            <a class="btnnn"  href="JavaScript:void(0)" type="button" style="border-radius: 8px; font-size: 16px;"><img src="assets/images/wallet.png" alt="" srcset="" style="width: 14px !important;"> &nbsp;Connected</a>
+          </li>
+          <li (click)="openTypeform()">
+            <a href="JavaScript:void(0)" type="button" class="mint" style="border-radius: 8px;"><img src="assets/images/whitelist.png" alt="" srcset="" style="width: 12px !important;margin-top: -1px;"> &nbsp;Whitelist Now</a>
+            </li>
+          <!-- <li><a href="JavaScript:void(0)"><img src="assets/images/social-1.svg" alt="instagram"></a></li>
+          <li><a href="JavaScript:void(0)"><img src="assets/images/social-2.svg" alt="discord"></a></li>
+          <li><a href="JavaScript:void(0)"><img src="assets/images/social-3.svg" alt="twitter"></a></li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+</section>
+
+<!----------------------------------------Wallet Popup------------------------------------------->
+<ng-template #content let-modal>
+  <div class="wall_pop">
+    <div class="modal-header">
+      <h4 class="modal-title text-center" id="modal-basic-title">Connect Wallet</h4>
+      <button type="button" class="btn-close close" aria-label="Close" (click)="modal.dismiss('Cross click')"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal-body">
+      <div class="header">
+        <h6 class="text-center" style="font-size:18px">
+          <span style="color:#b2b2ae">Select one of these wallet providers to connect your Ethereum wallet.</span> <a href="JavaScript:void(0)" class="wal_link"><b>What is
+              a wallet?</b></a>
+          </h6>
+      </div>
+      <div class="col-lg-12-full">
+          <div class="card wall-btn my-3" (click)="connect('metamask')">
+            <div class="d-flex">
+              <div>
+                <img src="assets/images/wallets/meta_logo.png" width="30px">
+              </div>
+              <div>
+                <h6>METAMASK</h6>
+              </div>
+            </div>
+          </div>
+          <div class="card wall-btn my-3" (click)="connect('coinbase')">
+            <div class="d-flex">
+              <div>
+                <img src="assets/images/wallets/coinbase.png" width="40px">
+              </div>
+              <div>
+                <h6>COINBASE WALLET</h6>
+              </div>
+            </div>
+          </div>
+          <div class="card wall-btn my-3" (click)="connect('torus')">
+            <div class="d-flex">
+              <div>
+                <img src="assets/images/wallets/torus.png" width="30px">
+              </div>
+              <div>
+                <h6>TORUS</h6>
+              </div>
+            </div>
+          </div>
+          <div class="card wall-btn my-3" (click)="connect('enkrypt')">
+            <div class="d-flex">
+              <div>
+                <img src="assets/images/wallets/enkrypt.png" width="30px">
+              </div>
+              <div>
+                <h6>ENKRYPT</h6>
+              </div>
+            </div>
+          </div>
+          <div class="card wall-btn my-3" (click)="connect('WalletConnect')">
+            <div class="d-flex">
+              <div>
+                <img src="assets/images/wallets/wallet_connect.png" width="30px">
+              </div>
+              <div>
+                <h6>WALLET CONNECT</h6>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+        <span style="color:#b2b2ae; line-height: 1.4;">
+            We do not own your private keys and cannot access your funds without your confirmation.
+        </span>
+    </div>
+  </div>
+</ng-template>
+
+<div id="show"></div>
+<!-- <div id="form" data-tf-widget="dnmlRzbL" data-tf-opacity="100" data-tf-iframe-props="title=Whitelisting Form for Ukraine Confidential" data-tf-transitive-search-params data-tf-medium="snippet"></div> -->

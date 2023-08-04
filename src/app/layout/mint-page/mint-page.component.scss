@@ -1,0 +1,60 @@
+.mint-img{
+    min-height: 300px !important;
+    // height: 100% !important;
+    height: auto !important;
+}
+.navigation {
+    display: flex;
+}
+
+.prev_mint {
+    border: none;
+    background: transparent;
+    color: gray;
+    top: 30%;
+    font-size: 30px;
+}
+
+.next_mint {
+    border: none;
+    background: transparent;
+    color: gray;
+    top: 30%;
+    font-size: 30px;
+}
+.mintDES{
+    left: 25px;
+}
+
+@media (max-width:767px) {
+    .next_mint {top: 34%;}
+    .prev_mint {top: 34%;}
+    .mintDES {top: 40px;left: 0 !important;}
+    .Whitelist {font-size: 28px !important;}
+    .mint-img {width: 100% !important;min-width: 65% !important; min-height: 100px !important;}
+    .mtBtn { display: flex; justify-content: center; margin: 1.5rem 0; }
+}
+
+
+
+
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 667px) 
+    and (-webkit-device-pixel-ratio : 2) { 
+     .mint-img {width: 100% !important;min-width: 65% !important; min-height: 100px !important;}
+    }
+
+@media only screen 
+    and (device-width : 414px) 
+    and (device-height : 736px) 
+    and (-webkit-device-pixel-ratio : 3) { 
+        .mint-img {width: 100% !important;min-width: 65% !important; min-height: 100px !important;}
+    }
+
+    @media only screen 
+    and (device-width : 414px) 
+    and (device-height : 896px) 
+    and (-webkit-device-pixel-ratio : 2) {
+        .mint-img {width: 100% !important;min-width: 65% !important; min-height: 100px !important;}
+     }

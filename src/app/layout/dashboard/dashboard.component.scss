@@ -1,0 +1,354 @@
+
+.close:hover{
+    opacity: 1 !important;
+    background: #fff !important;
+}
+.sizing{
+    margin-bottom: 15px !important;
+}
+.listStyle{
+    list-style: disc !important;
+    margin-bottom: 5px !important;
+}
+.listStyle2{
+    list-style: circle !important;
+    margin-bottom: 5px !important;
+    margin-left: 30px !important;
+}
+.mat-right-p-3 h4{
+    margin: 10px 0 10px 0 !important;
+}
+.imagecr{
+    // background: url(../../../assets/images/Paul2.png) 50% 50% / cover no-repeat !important;
+}
+.Christian{
+    // background: url(../../../assets/images/Christian.png) 50% 50% / cover no-repeat !important;
+}
+
+body .slick-prev, 
+body .slick-next {
+    height: 45px;
+    width: 40px;
+    background: grey !important;
+    z-index: 100;
+}
+.roadmap_img img{
+    width: 250px;
+}
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  .colouring{
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+  }
+  .only-mob{
+    display: none !important;
+  }
+
+
+  .desc_card{
+    margin: 158px 26px 0 144px;
+  }
+  .Rare-p-ul1{
+    font-size: 14px;
+      font-weight: 400;
+      margin: 0px auto;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      justify-content: space-between;
+  }
+  
+  .seleect-design {
+    margin: 0 0 20px 0;
+  }
+  
+  .seleect-design select {
+    height: 50px;
+    padding: 0 15px;
+  }
+  
+  
+  /* Example arrow styles */
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+  }
+  
+  .slick-prev {
+    left: 10px;
+  }
+  
+  .slick-next {
+    right: 10px;
+  }
+  
+  .cardd{background: #aeafb0;padding: 40px;color: #140202;border-radius: 15px;font-size: 18px;padding: 10px 10px 10px 10px;width: 100%;font-weight: 600;height: 100px;max-width: 180px;}
+  .num1{color: #18fe17;font-size: 30px;position: absolute;margin-top: -24px;margin-left: 14px;font-weight: 600;}
+  .only-mob1{display: block;}
+  
+  .dropdown-toggle::after {
+    display: none;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+  }
+  .content{
+    position: absolute;
+    top: 46%;
+    left: 25px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .content h1{
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 4px 4px 4px #111;
+    margin-bottom: 1rem;
+  }
+  .content p{
+    font-size: 38px;
+    font-weight: 500;
+    color: #fff;
+    text-shadow: 3px 3px 3px #111;
+    margin-top: 10px;
+    line-height: 1;
+  }
+  .slider-under {
+    position: relative;
+    padding: 0 26px !important;
+  }
+  
+  
+  .slider-cus.only-view-comic-slider .slider-under {
+    padding: 0 !important;
+  }
+  .slider-cus.only-view-comic-slider .slick-slide {
+    padding: 0 0px !important;
+  }
+  .slider-cus.only-view-comic-slider .slick-slide img {
+    max-width: 100%;
+    // cursor: pointer;
+  }
+  .slider-cus.only-view-comic-slider .col-lg-12{padding: 0px;}
+  .pd-12{padding: 0 12px;}
+  
+  
+  
+  .our-team .col-lg-12 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .our-team .slider-under {
+    padding: 0 0 !important;
+  }
+  .UKRC_comm {
+    padding-bottom: 80px;
+  }
+  .roadmap-only {
+    padding-bottom: 80px;
+  }
+
+  .film_strem {
+    padding-bottom: 80px;
+}
+section .faq-div .bns_pck,section.faq-div.film_prod,section.faq-div.comic_book,section.faq-div.UKRC-NFT,section.faq-div.evnt_promo,section.faq-div.film_strem{
+  overflow: hidden !important;
+}
+
+.comicc-content{
+  border: 2px solid #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+.comicc-content img{
+  position: relative;
+  right: 0;
+  width: 100%;
+  border-radius: 10px;
+  // padding: 14px;
+}
+.evnt_promo {
+  padding-bottom: 80px;
+}
+
+.col-lg-5.isSmart_web {
+  padding-left: 0;
+}
+
+.mat-right.size p {
+  margin: 0 0 15px 0;
+  font-weight: 500;
+  padding: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: left;
+}
+.bkImg{
+  // background: url(../../../assets/images/bk2.png) 50% 50% / 500px no-repeat !important;
+  // width: 500px !important;
+  // position: absolute;
+  // left: 33rem;
+  // top: 90rem;
+  background: url(../../../assets/images/buy_50.png) !important;
+  background-size: 100% !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+.bns-dt p {
+  color: #fff;
+  line-break: auto;
+  font-size: 14px;
+  margin: 0 0 15px 0;
+  line-height: 20px;
+  padding: 0 0 0 15px;
+  position: relative;
+  top: 8px;
+}
+// .col-lg-4.bns-dt span {
+//     width: 7px;
+//     height: 7px;
+//     border-radius: 20px;
+//     display: inline-block;
+//     background: #18fe17;
+//     position: absolute;
+//     left: 0;
+//     top: 6px;
+// }
+.film-content{
+  border: 2px solid #fff;
+  padding: 15px;
+  border-radius: 10px;
+}
+.film-content img{
+  position: relative;
+  right: 0px;
+  width: 100%;
+  border-radius: 10px;
+}
+.comicc-content{
+  border: 2px solid #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+.comicc-content img{
+  position: relative;
+  right: 0;
+  width: 100%;
+  border-radius: 10px;
+  // padding: 14px;
+}
+.content-faq-new .text-white.text-center {
+  margin: 0 auto !important;
+  font-size: 22px;
+  position: relative;
+  line-height: 35px;
+  text-align: left !important;
+  max-width: 510px;
+  font-weight: 400;
+  display: block;
+  margin-bottom: 25px !important;
+  left: 0px;
+  text-align: center !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+    .only-mob{
+      display: block !important;
+    }
+    .only-mob1{display: none !important;}
+  }
+  @media (min-width:768px) {
+    .isSmart_mob{display: none;}
+    .isSmart_web{display: block;}
+}
+
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+    .only-mob{
+      display: block !important;
+    }
+    .only-mob1{display: none !important;}
+    .roadmapcard1{
+      background: #18fe17;
+      height: 165px;
+      line-height: 3;
+      border-radius: 50px;
+    }
+    .content{top:28% !important;}
+    .content h1 {font-size: 26px !important;margin-bottom: 0 !important;}
+    .content p {font-size: 20px !important;}
+  }
+  .same-discove1 {
+    padding: 30px 30px;
+    overflow: hidden;
+}
+
+
+
+@media (max-width:767px) {
+  .roadmap-only {padding-bottom: 30px;}
+  .join {padding: 100px 0 150px 0;}
+.col-lg-5.isSmart_web {padding-left: 15px;}
+.isSmart_mob{display: block;}
+.film_strem {padding-bottom: 50px;}
+  .roadmap-only {
+    padding-bottom: 20px !important;
+}
+.isSmart_web{display: none;}
+.evnt_promo {padding-bottom: 50px;}
+.comicc-content img {width: 100% !important;}
+  .content{top:28% !important;}
+  .content h1 {font-size: 26px !important;margin-bottom: 0 !important;text-shadow: 3px 3px #111 !important;}
+  .content p {font-size: 18px !important; text-shadow: 3px 3px #111 !important;}
+  .roadmap-only {padding-bottom: 40px;}
+  .UKRC_comm {
+    padding-bottom: 35px !important;
+}
+}

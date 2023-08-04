@@ -1,0 +1,71 @@
+@import "~animate.css/animate.css";
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #146c14; 
+    border-radius: 10px;
+  }
+  #form .tf-v1-widget iframe {
+    width: 100%;
+    min-height: 650px;
+    border-radius: 12px;
+  }
+  #show .tf-v1-popup .tf-v1-iframe-wrapper iframe {
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    height: 500px;
+    border-radius: 12px;
+    background: none;
+    z-index: 999999999;
+    overflow: auto;
+  }
+  #show .tf-v1-popup .tf-v1-iframe-wrapper a {
+    color: #ffffff;
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    left: 21px;
+    font-size: 26px;
+    z-index: 9999999999;
+  }
+  
+  #show .tf-v1-popup .tf-v1-iframe-wrapper {
+  width: 100% !important;
+}
+#form a.tf-v1-widget-close.tf-v1-close-icon {
+  display: none !important;
+}
+  @media (max-width:767px) {
+    #show .tf-v1-popup .tf-v1-iframe-wrapper iframe {
+      position: relative;
+      width: 100%;
+      height: 439px;
+      border-radius: 12px;
+      background: none;
+      display: flex;
+  }
+  #show .tf-v1-popup .tf-v1-iframe-wrapper a {
+    color: #ffffff;
+    position: absolute;
+    cursor: pointer;
+    top: 82px;
+    left: 23px;
+    font-size: 28px;
+}
+    #form {
+      height: auto !important;
+    }
+  }
+  
+  ng-multiselect-dropdown{
+    no-filtered-data{
+      font-size: 14px;
+    }
+    .multiselect-dropdown {
+      background: #fff;
+      font-weight: 600;
+    }
+  } 

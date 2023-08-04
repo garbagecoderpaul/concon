@@ -1,0 +1,52 @@
+
+<section class="slider-cus only-this-slider">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="slider-under" style="position: relative;">
+                    <ngx-slick-carousel class="carousel center slider" #slickModal="slick-carousel"
+                        [config]="slideConfigVideo" (init)="slickInit($event)" (breakpoint)="breakpoint($event)"
+                        (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
+                        <div ngxSlickItem *ngFor="let video of videosets" class="slide slide-item">
+                            <div class="width-fx">
+                                <div class="videoSeets">
+                                    <div >
+                                    <ng-container *ngIf="video.type == 'video' && ShowMac == true">
+                                        <div class="rel-12 mac">
+                                            <video  #videoElement loop preload="false" autoplay="{{false}}" playsinline  poster="{{video.video_url}}" class="video-container" [src]="video.video_url" (play)="onVideoPlay(videoElement,video)" (ended)="onVideoEnded(video)" (pause)="onVideoPause(videoElement)" (click)="togglePlayPause(videoElement,video)" controls> 
+                                            </video>
+                                            <button class="play-pause-btn" [hidden]="video.isPlaying" (click)="togglePlayPause(videoElement,video)"><i class="fa fa-play" style="font-size:24px; color: #ffffff;"></i></button>
+                                        </div>
+                                    </ng-container>
+                                    <ng-container *ngIf="video.type == 'video' && ShowMac == false">
+                                        <div class="rel-12">
+                                        <video #videoElement class="video-container" playsinline [src]="video.video_url" (play)="onVideoPlay(videoElement,video)" (ended)="onVideoEnded(video)" (pause)="onVideoPause(videoElement)" (click)="togglePlayPause(videoElement,video)" controls> 
+                                        </video>
+                                        <button class="play-pause-btn" [hidden]="video.isPlaying" (click)="togglePlayPause(videoElement,video)"><i class="fa fa-play" style="font-size:24px; color: #ffffff;"></i></button>
+                                        </div>
+                                    </ng-container>
+                                    <ng-container *ngIf="video.type == 'image'">
+                                        <a [href]="video.url" target="_blank"><img [src]="video.video_url" alt="" class="video-container"></a>
+                                    </ng-container>
+                                    </div>
+                                </div>
+                                <div class="videoInfo videoSettsinfo">
+                                    <div class="video-banner-content">
+                                        <p class="Pilot-1-videoSet">{{video.title}}</p>
+                                        <p class="Pilot-2">{{video.description}}</p>
+                                        <p class="Pilot-3">{{video.video_date | date: 'MM/dd/yyyy'}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ngx-slick-carousel>
+                    <ng-container *ngIf="error == true || !videosets?.length">
+                        <div class="rel-12 nodata">
+                            <p class="text-center text-white">No Data Found</p>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,6 @@
+<div class="loader-container" *ngIf="showloader">
+    <img src="assets/images/UC_logo.gif" alt="Loading..." width="180px">
+  </div>
+<div *ngIf="!showloader">
+    <router-outlet></router-outlet>
+  </div>

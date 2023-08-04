@@ -1,0 +1,478 @@
+<section class="video-on-top">
+  <div class="container">
+    <div class="row pt-5 tpSpce">
+      <div class="video-top">
+        <div class="content-faq-new">
+          <!-- <div class="cat-slider12 slider-video-custom">
+            <video class="cat-full-img" src="{{ this.docBanner }}" autoplay playsinline muted autobuffer loop id="vid" #videoRef></video>
+          </div> -->
+          <div class="content-documentry">
+            <!-- <div class="animation">
+              <div class="first"><div>Spread your word</div></div>
+              <div class="second"><div>Create documentry</div></div>
+              <div class="third"><div>Become a director</div></div>
+            </div> -->
+            <ngx-slick-carousel class="carousel center slider" *ngIf="loadslider" #slickModal="slick-carousel" 
+              [config]="slideConfigpBanner" (init)="slickInit($event)" (breakpoint)="breakpoint($event)"
+              (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
+              <div ngxSlickItem class="slide slide-item-2">
+                <div class="first">
+                  <p style="text-align: center;">Spread your word</p>
+                </div>
+              </div>
+              <div ngxSlickItem class="slide slide-item-2">
+                <div class="second">
+                  <p style="text-align: center;">Create Documentary</p>
+                </div>
+              </div>
+              <div ngxSlickItem class="slide slide-item-2">
+                <div class="third">
+                  <p style="text-align: center;">Become a director</p>
+                </div>
+              </div>
+            </ngx-slick-carousel>
+          </div>
+          <p class="text-white text-center">
+            <!-- <span class="syw">Spread your word</span><br />
+            <span class="cdt">Create documentry</span> <br />
+            <span class="bdr">Become a director</span><br /> -->
+            <span class="wukc">with UKRC Community</span>
+          </p>
+          <p class="text-white text-center mt-5 mobBtns">
+            <span><a class="btnnnn" href="JavaScript:void(0)" (click)="navigate()"  type="button">Join</a></span>
+            <span><a href="JavaScript:void(0)" routerLink="/mint" type="button" class="mintBtn"
+                style="border-radius: 8px">Mint</a></span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="video text-center">
+        <div class="nft_4_web">
+          <ng-container *ngIf="ShowMac == true">
+            <div class="rel-12">
+            <video  #videoElement loop="false" preload="false" autoplay="{{false}}" playsinline poster="{{banner[0]?.video_url}}" class="video-container" [src]="banner[0]?.video_url" (play)="onVideoPlay(videoElement,banner)" (ended)="onVideoEnded(banner)" (pause)="onVideoPause(videoElement)" (click)="togglePlayPause(videoElement,banner)"> 
+            </video>
+          <button class="play-pause-btn-doc" [hidden]="banner[0]?.isPlaying" (click)="togglePlayPause(videoElement,banner)"><i class="fa fa-play" style="font-size:24px; color: #ffffff;"></i></button>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="ShowMac == false">
+            <div class="rel-12">
+              <video  #videoElement loop="false" class="video-container" [src]="banner[0]?.video_url" playsinline (play)="onVideoPlay(videoElement,banner)" (ended)="onVideoEnded(banner)" (pause)="onVideoPause(videoElement)" (click)="togglePlayPause(videoElement,banner)"> 
+              </video>
+              <button class="play-pause-btn-doc" [hidden]="banner[0]?.isPlaying" (click)="togglePlayPause(videoElement,banner)"><i class="fa fa-play" style="font-size:24px; color: #ffffff;"></i></button>
+            </div>
+        </ng-container>
+        </div>
+        <div class="nft_4_mobile">
+          <ng-container *ngIf="ShowMac == true">
+            <div class="rel-12">
+            <video  #videoElement loop preload="false" autoplay="false" playsinline poster="{{banner[0]?.video_url}}" class="video-container" [src]="banner[0]?.video_url" (play)="onVideoPlay(videoElement,banner)" (ended)="onVideoEnded(banner)" (pause)="onVideoPause(videoElement)" (click)="togglePlayPause(videoElement,banner)" controls> 
+            </video>
+          <button class="play-pause-btn-doc" [hidden]="banner[0]?.isPlaying" (click)="togglePlayPause(videoElement,banner)"><i class="fa fa-play" style="font-size:24px; color: #ffffff;"></i></button>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="ShowMac == false">
+            <div class="rel-12">
+              <video  #videoElement class="video-container" [src]="banner[0]?.video_url" playsinline (play)="onVideoPlay(videoElement,banner)" (ended)="onVideoEnded(banner)" (pause)="onVideoPause(videoElement)" (click)="togglePlayPause(videoElement,banner)" controls> 
+              </video>
+              <button class="play-pause-btn-doc" [hidden]="banner[0]?.isPlaying" (click)="togglePlayPause(videoElement,banner)"><i class="fa fa-play" style="font-size:24px; color: #ffffff;"></i></button>
+            </div>
+        </ng-container>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <p class="text-white text-center cntnt">
+              Echoes of the War. Web3 platform turns your ideas into action.
+            </p>
+            <p class="text-white cntnt">
+              Create, vote and share your ideas on the most influential topic
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="video-on-top">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="cat-slider12 slider-video-custom">
+          <video class="cat-full-img" src="{{ this.banner }}" controls></video>
+        </div>
+        <div class="crew-ani">
+          <ul class="d-flex">
+            <li>
+              <img
+                src="assets/images/facebook.png"
+                style="width: 30px; margin-left: 5px"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="assets/images/tweet.png"
+                style="width: 31px; margin-left: 5px"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="assets/images/email.png"
+                style="width: 32px; margin-left: 5px"
+                alt=""
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="video-banner-content">
+          <p class="Pilot-1">Intro</p>
+          <p class="Pilot-2">UKRAINE CONFIDENTIAL</p>
+          <p class="Pilot-3">5/3/2023</p>
+          <p class="Pilot-4">
+            Web3 community <br />
+            Documentary about war
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<app-video-section></app-video-section>
+
+<!-- <section class="Ukraine-confidential">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="Ukraine-confidential-div Ukraine-1212">
+          <div class="faq-content mb-4">
+            <h1 class="forUndrline">From Spectator to Director</h1>
+          </div>
+          <p class="Ukraine-confidential-p2">
+            The web3 project is a unique and innovative approach to creating a
+            documentary about the Russian Ukrainian war. The project aims to
+            show the conflict from different angles and scopes, highlighting how
+            decisions made by major players such as politicians, oligarchs, and
+            media affect ordinary people caught up in the conflict. The
+            documentary will be based on real facts and people involved in the
+            conflict, providing an authentic and compelling look at the war.
+          </p>
+          <p class="Ukraine-confidential-p2">
+            What makes this project truly unique is its integration of web3
+            technology. By using NFTs and allowing NFT holders to vote on the
+            direction of the film production, the project creates a
+            collaborative and community-driven approach to documentary making.
+            NFT holders will have a say in crucial decisions such as where to go
+            for interviews, providing a level of engagement and investment in
+            the project not seen in traditional documentary making. This
+            approach has the potential to create a truly immersive and engaging
+            documentary experience, one that is shaped by the collective
+            decision-making of a community of stakeholders.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section class="faq-div UKRC_comm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="Ukraine-1212">
+          <div class="row">
+            <div class="col-lg-12 mb-4">
+              <div class="faq-content">
+                <h1 class="forUndrline">From Spectator to Director</h1>
+              </div>
+            </div>
+            <div class="div-col-lg-12">
+              <div class="mat-right-p-3 sizing" style="text-align: left;">
+                <div>
+                  <p>
+                    The web3 project is a unique and innovative approach to creating a
+                    documentary about the Russian Ukrainian war. The project aims to
+                    show the conflict from different angles and scopes, highlighting how
+                    decisions made by major players such as politicians, oligarchs, and
+                    media affect ordinary people caught up in the conflict. The
+                    documentary will be based on real facts and people involved in the
+                    conflict, providing an authentic and compelling look at the war.
+                  </p>
+                  <p>
+                    What makes this project truly unique is its integration of web3
+                    technology. By using NFTs and allowing NFT holders to vote on the
+                    direction of the film production, the project creates a
+                    collaborative and community-driven approach to documentary making.
+                    NFT holders will have a say in crucial decisions such as where to go
+                    for interviews, providing a level of engagement and investment in
+                    the project not seen in traditional documentary making. This
+                    approach has the potential to create a truly immersive and engaging
+                    documentary experience, one that is shaped by the collective
+                    decision-making of a community of stakeholders.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="Ukraine-confidential story nft_4_web">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="Ukraine-confidential-div ukraine-slider">
+          <ngx-slick-carousel class="carousel center slider" #slickModal="slick-carousel" [config]="slideConfigpart"
+            (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
+            (beforeChange)="beforeChange($event)">
+            <div ngxSlickItem *ngFor="let slide of story" class="slide slide-item-2">
+              <img class="docSlick" src="{{ slide?.image }}" alt="" style="border-radius: 10px" />
+            </div>
+          </ngx-slick-carousel>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="Ukraine-confidential story nft_4_mobile">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="Ukraine-confidential-div ukraine-slider">
+          <ngx-slick-carousel class="carousel center slider" #slickModal="slick-carousel" [config]="slideConfigpart"
+            (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
+            (beforeChange)="beforeChange($event)">
+            <div ngxSlickItem *ngFor="let slide of story_mob" class="slide slide-item-2">
+              <img class="docSlick" src="{{ slide.image }}" alt="" style="border-radius: 10px" />
+            </div>
+          </ngx-slick-carousel>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="voteing-section only-vot">
+  <div class="container-fluid bdless">
+    <div class="row">
+      <div class="col-lg-12 inEnd">
+        <div class="voteing-content">
+          <img src="assets/images/banner-live2.png" alt="" />
+          <div class="vote-1">
+            <p>VOTING</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-div discover-only options-content story nft_4_web">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="faq-content">
+          <h1 class="forUndrline">Choose the direction of your story</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 direction-slider">
+        <ngx-slick-carousel class="carousel center slider" #slickModal="slick-carousel" [config]="slideConfigpart"
+          (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
+          (beforeChange)="beforeChange($event)">
+          <div ngxSlickItem *ngFor="let slide of direction" class="slide slide-item-2">
+            <img class="docSlick" src="{{ slide.image }}" alt="" style="border-radius: 10px" />
+          </div>
+        </ngx-slick-carousel>
+      </div>
+      <!-- <div class="col-lg-5">
+        <h5 style="color: aliceblue">
+          Ask a Russian politician about <br />
+          weapon imports
+        </h5>
+        <img
+          src="assets/images/interview-Rus-polit.jpg"
+          alt=""
+          width="328px"
+          height="250px"
+        />
+      </div>
+      <div class="col-lg-2">
+        <h1 class="choose-or">OR</h1>
+      </div>
+      <div class="col-lg-5">
+        <h5 style="color: aliceblue">
+          Ask a Ukrainian officer about <br />
+          their most recent offensive <br />
+          operation
+        </h5>
+        <img
+          src="assets/images/interview-war.png"
+          alt=""
+          width="328px"
+          height="250px"
+        />
+      </div> -->
+    </div>
+  </div>
+</section>
+
+<section class="Ukraine-confidential story nft_4_mobile">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="faq-content">
+          <h1 class="forUndrline">Choose the direction of your story</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="Ukraine-confidential-div ukraine-slider">
+          <ngx-slick-carousel class="carousel center slider" #slickModal="slick-carousel" [config]="slideConfigpart"
+            (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
+            (beforeChange)="beforeChange($event)">
+            <div ngxSlickItem *ngFor="let slide of direction_mob" class="slide slide-item-2">
+              <img class="docSlick" src="{{ slide.image }}" alt="" style="border-radius: 10px" />
+            </div>
+          </ngx-slick-carousel>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="voteing-section crew-only nft_4_web">
+  <div class="container-fluid ofend">
+    <div class="row">
+      <div class="alingn-head">
+        <div class="col-lg-12">
+          <div class="rarity-vote-3 crew-head">
+            <p>Share your story</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 inEnd">
+        <div class="voteing-rarity">
+          <img src="assets/images/rarity.jpg" alt="" />
+          <div class="rarity-vote-1">
+            <p>
+              DIRECTOR'S <br />
+              COMMUNITY
+            </p>
+          </div>
+          <div class="rarity-vote-2">
+            <p>
+              Rare NFT holders can become characters interviewed in the
+              documentary
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="voteing-section crew-only nft_4_mobile">
+  <div class="container-fluid ofend">
+    <div class="row">
+      <div class="alingn-head">
+        <div class="col-lg-12">
+          <div class="rarity-vote-3 crew-head">
+            <p>SHARE <BR> YOUR <BR> STORY</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 inEnd">
+        <div class="voteing-rarity">
+          <img src="assets/images/pexels-david-peterson-mob.png" alt="" />
+          <div class="rarity-vote-1">
+            <p>
+              DIRECTOR'S <br />
+              COMMUNITY
+            </p>
+          </div>
+          <div class="rarity-vote-2">
+            <p>
+              Rare NFT holders can become characters interviewed in the
+              documentary
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="voteing-section mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="crew-content"></div>
+        <div class="crew-text">
+          <h3>About our Filming Crew</h3>
+          <p>Filmmakers & Investigative Journalists</p>
+          <p>
+            Our passionate filmmaking team is composed of professional,
+            award-winning documentary filmmakers and investigative journalists
+            with a strong commitment to truth-telling.
+          </p>
+          <p>
+            Our team includes seasoned journalists with over 20 years of
+            experience. We unite people from different countries who share a
+            common passion for uncovering the facts surrounding the
+            Russian-Ukrainian conflict.
+          </p>
+          <p>
+            With a focus on seeking the truth and presenting it to the world, we
+            bring a fresh perspective to this complex and often-misunderstood
+            topic.
+          </p>
+          <p>
+            Our team is dedicated to producing high-quality film that will
+            educate, inform, and inspire audiences worldwide.
+          </p>
+          <!-- <div class="crew-ani">
+            <ul class="d-flex">
+              <li>
+                <img
+                  src="assets/images/social_2.png"
+                  style="width: 29px; margin-left: 5px"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="assets/images/social_4.png"
+                  style="width: 30px; margin-left: 5px"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="assets/images/twitter.svg"
+                  style="width: 31px; margin-left: 5px"
+                  alt=""
+                />
+              </li>
+            </ul>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,73 @@
+<section class="comic-cus">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-lg-12">
+                <div class="comic-content">
+                    <h1>THE COMICS</h1>
+                    <!-- <p>WHO EVEN READS <br>THESE DAYS?</p> -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4" *ngFor="let comic of allComics">
+                <div class="comic-left">
+                    <img class="comic-left-img" src="{{ comic?.comics_path }}" alt="" (click)="open(content)">
+                    <p class="comic-left-p">{{comic?.comic_label}}</p>
+                    <p class="comic-left-p-1">{{comic?.title}}</p>
+                </div>
+            </div>
+            <!-- <div class="col-lg-4 nft_4_web">
+                <div class="comic-left">
+                    <img class="comic-left-img dummy_comic_img" src="assets/images/uk pale-logo.png" alt="">
+                    <p class="comic-left-p">UKRC Comic...</p>
+                    <p class="comic-left-p-1 noimage">COMING SOON...</p>
+                </div>
+            </div> -->
+        </div>
+        <ng-container *ngIf="!allComics?.length">
+            <p class="text-center text-white">No Data Found</p>
+          </ng-container>
+    </div>
+</section>
+
+<section class="faq-div voteing-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="Ukraine-1212">
+                    <div class="row">
+                        <div class="col-lg-12 mb-4">
+                            <div class="faq-content">
+                                <h1 class="forUndrline">{{comicdesc?.header}}</h1>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="mat-right-p-3 sizing" style="text-align: left;">
+                                <div [innerHTML]="comicBody"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ng-container *ngIf="!comicdesc">
+                    <p class="text-center text-white">No Data Found</p>
+                  </ng-container>
+            </div>
+        </div>
+    </div>
+</section>
+<ng-template #content let-modal>
+    <div class="wall_pop">
+        <div class="modal-header">
+            <h4 class="modal-title text-center" style="color: #fff;" id="modal-basic-title">Chapter 1</h4>
+            <button type="button" class="btn-close close" aria-label="Close" (click)="modal.dismiss('Cross click')"><i
+                    class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="modal-body">
+            <button (click)="zoomIn()"><i class="fa fa-search-plus" aria-hidden="true"></i></button>
+            <button (click)="zoomOut()"><i class="fa fa-search-minus" aria-hidden="true"></i></button>
+            <pdf-viewer [src]="pdfsrc"
+              [render-text]="true"
+              [original-size]="false" [zoom]="zoomLevel" class="pdf-viewer"></pdf-viewer>
+        </div>
+    </div>
+</ng-template>

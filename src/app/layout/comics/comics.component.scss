@@ -1,0 +1,45 @@
+.phrase__text.col--wh.is--comics {
+    position: absolute !important;
+    align-self: flex-end !important;
+    // transform: translate(-28.47em, 14.1em) rotate(15deg) !important;
+}
+.col--wh {
+    color: #fff  !important;
+}
+.p--20px.is--verveine {
+    font-family: verveine , sans-serif !important;
+    line-height: 1.1 !important;
+    font-weight: 400 !important;
+}
+
+.p--20px {
+    font-family: roc-grotesk-condensed, sans-serif !important;
+    font-size: 1.39em !important;
+    line-height: 1.75 !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+}
+.mat-right-p-3.sizing p {
+    margin: 0px !important;
+    font-weight: 500;
+    padding: 15px 30px;
+    color: #fff;
+}
+.dummy_comic_img{
+        position: absolute;
+        left: 50%;
+        top: 30%;
+        // z-index: 1;
+        display: block;
+        overflow: hidden;
+        width: 12.75em;
+        height: 12.29em;
+        margin-right: auto;
+        margin-left: auto;
+        border-radius: 0.35em;
+        transform: translate(-50%, -80px);
+        cursor: pointer;
+        transition-timing-function: cubic-bezier(.4,0,.2,1);
+        transition-duration: .15s;
+}

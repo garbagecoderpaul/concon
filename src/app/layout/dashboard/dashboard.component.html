@@ -1,0 +1,315 @@
+<!-----------------------Banner Section-------------------------------->
+<section class="cat-slider12">
+  <video class="cat-full-img" src="{{this?.banner}}" autoplay playsinline muted autobuffer loop id="vid" #videoRef>
+  </video>
+  <!-- <div class="content">
+    <h1>WEB3 Collaborative Documentary </h1>
+    <p>about Ukraine war to raise</p>
+    <p>awareness and support victims</p>
+    <p>#LessonsOfUkrainianWar</p>
+  </div> -->
+</section>
+
+<!------------------------------director section(mobile only)------------------------------------->
+<!-- <section class="faq-div only-mob">
+  <div class="container">
+    <div class="row Ukraine-1212">
+      <div class="col-lg-12">
+        <div class="faq-content">
+          <h1 class="forUndrline">Become a filmmaker</h1>
+        </div>
+      </div>
+      <div class="div-col-lg-12 my-4">
+        <div class="">
+          <span class="num1">1</span>
+          <div class="cardd text-center">
+            Get NFTs
+          </div>
+        </div>
+      </div>
+      <div class="div-col-lg-12 my-4">
+        <div class="" style="float: right;">
+          <span class="num1">2</span>
+          <div class="cardd text-center">
+            Collect rare NFTs and increase your voting
+          </div>
+        </div>
+      </div>
+      <div class="div-col-lg-12 my-4">
+        <div class="">
+          <span class="num1">3</span>
+          <div class="cardd text-center">
+            Vote & influence the direction of the project
+          </div>
+        </div>
+      </div>
+      <div class="div-col-lg-12 my-4">
+        <div class="" style="float: right;">
+          <span class="num1">4</span>
+          <div class="cardd text-center">
+            Enjoy the story and benefit from monetization
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<app-video-section></app-video-section>
+
+
+
+<!-------------------------------ukrc community section----------------------------------->
+<section class="faq-div UKRC_comm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="Ukraine-1212">
+          <div class="row">
+            <div class="col-lg-12 mb-4">
+              <div class="faq-content">
+                <h1 class="forUndrline">UKRC Community</h1>
+              </div>
+            </div>
+            <div class="div-col-lg-12">
+              <div class="mat-right-p-3 sizing" style="text-align: left;">
+                <div [innerHTML]="prjDesc"></div>
+              </div>
+            </div>
+            <ng-container *ngIf="!prjDesc">
+              <p class="text-center text-white">No Data found</p>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-benefits></app-benefits>
+
+<!-------------------------------Roadmap Section------------------------------------>
+<section class="faq-div roadmap-only">
+  <div class="container">
+    <div class="row ">
+      <div class="col-lg-12">
+        <div class="faq-content mb-4">
+          <h1 class="forUndrline">Roadmap</h1>
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <div class="column-custom only-mob">
+          <!-- <ul>
+            <li>
+              <div class="card roadmapcard">
+                <div class="card-body">
+                  <div class="innerRoad" *ngFor="let road of roadMap">
+                    <p>Phase {{road.roadNum}}: {{road.bottom_title}}</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul> -->
+          <ul>
+            <li *ngFor="let road of roadMap">
+              <h5 class="card-title roadmaptittle">{{road?.header_title}}</h5>
+              <p class="cs-all-p2">Phase {{road?.roadNum}}</p>
+              <p class="cs-all-p2">{{road?.bottom_title}}</p>
+              <div class="card roadmapcard">
+                <div class="card-body">
+                  <!-- <h5 class="card-title roadmaptittle">Phase: {{road.roadNum}}</h5> -->
+                  <div class="innerRoad mt-4" [innerHTML]="road?.description"></div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="column-custom only-mob1">
+          <ul>
+            <li *ngFor="let road of roadMap">
+              <h5 class="card-title roadmaptittle">{{road?.header_title}}</h5>
+              <p class="cs-all-p2">Phase {{road?.roadNum}}</p>
+                  <p class="cs-all-p2">{{road?.bottom_title}}</p>
+              <div class="card roadmapcard">
+                <div class="card-body">
+                  <!-- <h5 class="card-title roadmaptittle">{{road.header_title}}</h5>
+                  <p class="cs-all-p2">{{road.bottom_title}}</p> -->
+                  <div class="innerRoad" [innerHTML]="road?.description"></div>
+                </div>
+              </div>
+              <!-- <div class="row">
+                <div class="col-lg-12">
+                  <div class="cs-all">
+                    <p class="cs-all-p1">{{road.roadNum}}</p>
+                    <p class="cs-all-p2">{{road.bottom_title}}</p>
+                  </div>
+                </div>
+              </div> -->
+            </li>
+          </ul>
+        </div>
+      </div>
+      <ng-container *ngIf="!roadMap?.length">
+        <p class="text-center text-white">No Data Found</p>
+      </ng-container>
+    </div>
+  </div>
+
+</section>
+
+<!-----------------------nft detail section------------------------------>
+<app-nftdetail></app-nftdetail>
+
+<!---------------------------comic section-------------------------------->
+<section class="slider-cus only-view-comic-slider">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="slider-under" style="position: relative;">
+          <div class="ab-center-custom">
+            <h1 class="text No-Coiners slide-text-disp nft_4_web">Ukraine Confidential</h1>
+            <h1 class="text No-Coiners slide-text-disp nft_4_mobile">Ukraine <br> Confidential</h1>
+          </div>
+          <div class="col-lg-12">
+            <div class="faq-content mb-4">
+              <h1 class="forUndrline" style="text-transform: none;">UKRC Comic</h1>
+            </div>
+          </div>
+          <ngx-slick-carousel class="carousel center slider" #slickModal="slick-carousel" [config]="slideConfig"
+            (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
+            (beforeChange)="beforeChange($event)">
+            <div ngxSlickItem *ngFor="let slide of allComics" class="slide slide-item">
+             <div class="pd-12">
+              <img src="{{ slide?.comics_path }}" alt="" style="border-radius: 10px;"  routerLink="/comics">
+             </div>
+            </div>
+          </ngx-slick-carousel>
+          <ng-container *ngIf="!allComics?.length">
+            <p class="text-center text-white">No Data Found</p>
+          </ng-container>
+          <div class="nft_4_mobile mt-4">
+            <div class="button-slider-center">
+              <button class="button-slider-center-bt" routerLink="comics">View Comic</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!------------------------join community-------------------------->
+<section class="faq-div join">
+  <div class="container">
+    <div class="row ">
+      <div class="col-lg-6">
+        <div class="faq-content">
+          <div class="center-div-hr">
+            <h1 class="forUndrline">Join our <br> community</h1>
+            <!-- <button class="mint-bt">MINT NOW</button> -->
+          </div>
+        </div>
+        <div class="row button-slider-center">
+          <button class="crd-bt" (click)="navigate()">Join Us</button>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="mat-right-p-3 sizing nft_4_web" style="text-align: justify;">
+          <img src="assets/images/mint1.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!---------------------------------nft popup------------------------------------->
+<ng-template #content let-modal>
+  <div class="wall_pop">
+    <div class="modal-header">
+      <h4 class="modal-title text-center" style="color: #fff;" id="modal-basic-title">Info</h4>
+      <button type="button" class="btn-close close" aria-label="Close" (click)="modal.dismiss('Cross click')"><i
+          class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal-body">
+      <div class="header">
+        <h6 class="text-center" style="font-size:18px"> </h6>
+      </div>
+      <div class="wall-btn">
+        <p class="colouring">Join a community centered around the story of the Ukrainian-Russian war.
+          We are creating a series of creative expressions, including tradable NFT art,
+          a documentary film, an online comic book series, and a board game,
+          all of which will be based on the real facts and people involved in the conflict.</p>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+
+<!--------------------------------Team Section------------------------------>
+<section class="our-team">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="faq-content">
+          <h1 class="forUndrline">Meet our Team</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-12">
+      <div class="slider-under ">
+        <ngx-slick-carousel class="carousel center slider" #slickModal="slick-carousel" [config]="slideConfiging"
+          (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
+          (beforeChange)="beforeChange($event)">
+          <div ngxSlickItem *ngFor="let team of ourTeam" class="slide slide-item">
+            <div class="team-ani">
+              <div class="demo">
+                <input type="checkbox" id="mask-switch"><label for="mask-switch">show hover
+                  point.</label>
+                <div class="box">
+                  <div class="hover-point"></div>
+                  <div class="hover-point"></div>
+                  <div class="hover-point"></div>
+                  <div class="hover-point"></div>
+                  <div class="hover-point"></div>
+                  <div class="hover-point"></div>
+                  <div class="hover-point"></div>
+                  <div class="hover-point"></div>
+                  <div class="box-contents"
+                    style="background: url('{{team?.filepath}}') 50% / cover no-repeat !important">
+                  </div>
+                </div>
+              </div>
+              <div class="ani-1">
+                <p class="max-1">{{team?.name}}</p>
+                <p class="max-2">{{team?.position}}</p>
+              </div>
+              <div class="ani-2">
+                <ul>
+                  <li *ngIf="team.twitter"><a href="{{team.twitter? team.twitter : 'JavaScript:void(0)'}}"
+                      target="_blank"><img src="assets/images/twitter.svg" alt=""></a>
+                  </li>
+                  <li *ngIf="team.insta"><a href="{{team.insta ? team.insta : 'JavaScript:void(0)'}}"
+                      target="_blank"><img src="assets/images/instagram.svg" alt=""></a></li>
+                  <li *ngIf="team.linkedin"><a href="{{team.linkedin ? team.linkedin : 'JavaScript:void(0)'}}"
+                      target="_blank"><img src="assets/images/social_2.png" style="padding: 0px;" alt=""></a></li>
+                  <li *ngIf="team.facebook"><a href="{{team.facebook ? team.facebook : 'JavaScript:void(0)'}}"
+                      target="_blank"><img src="assets/images/social_4.png" alt="" style="padding: 0px;"></a></li>
+                  <li *ngIf="team.personal_link"><a
+                      href="{{team.personal_link ? team.personal_link : 'JavaScript:void(0)'}}"
+                      target="_blank"><img src="assets/images/globe.png" alt="" style="padding: 0px;"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </ngx-slick-carousel>
+        <ng-container *ngIf="!ourTeam.length">
+          <p class="text-center text-white">No Data Found</p>
+        </ng-container>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-----------------------------FAQs------------------------------------>
+<app-faq></app-faq>

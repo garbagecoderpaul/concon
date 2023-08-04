@@ -129,7 +129,16 @@ ul.nav-pills.nav.flex-column li a,
 .load {position: absolute;top: 50%;left: 50%;}
 .next-arrow.slick-next.slick-arrow {right: 0 !important;}
 .prev-arrow.slick-prev.slick-arrow {left: 0 !important;}
-
+.faq-div.discover-only .form-group {
+  margin: 0;
+  border: none !important;
+}
+.faq-div.discover-only .ng2-tag-input {
+  border: none !important;
+}
+.faq-div.discover-only .dropdown-menu.w-100.show {
+  padding: 0;
+}
 
 @media (max-width: 767px) {
   .dropdown, .dropdown-center, .dropend, .dropstart, .dropup, .dropup-center .dropdown .seleect-design {padding: 0 0px !important;left: 0px !important;}

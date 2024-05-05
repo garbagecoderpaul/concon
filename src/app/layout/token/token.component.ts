@@ -13,9 +13,9 @@ export class TokenComponent implements OnInit {
   ngOnInit(): void {
 
   this.roadMap = [
-    {header_title:'Phase 1',roadNum:1,bottom_title:'Launch',description:'<p>launch</p><p>Iniswap / CoinGecko Listing</p><p>1,000+ Holders</p><p>Get $UCC Trending</p>'},
-    {header_title:'Phase 2',roadNum:2,bottom_title:'Stake',description:'<p>Community Collaborations</p><p>CEX Listings 10,000+ Holders</p>'},
-    {header_title:'Phase 3',roadNum:3,bottom_title:'Creativity',description:'<p>T1 Exchange Listings</p><p>UCC Tools</p><p>UCC Creative initiatives</p>'},
+    {header_title:'Phase 1',roadNum:1,bottom_title:'Preppe',description:'<p>Launch</p><p>Dex Listing</p><p>Be prepped for the WW3</p>'},
+    {header_title:'Phase 2',roadNum:2,bottom_title:'Shock & Awe',description:'<p>Community Collaborations</p><p>CEX Listings</p><p>WW3 on Fire</p>'},
+    {header_title:'Phase 3',roadNum:3,bottom_title:'New Era',description:'<p>T1 Exchange Listings</p><p>WW3 Tools & Governing</p><p>WW3 Piece Conference</p>'},
 
   ]
   }
